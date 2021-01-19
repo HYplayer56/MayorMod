@@ -1,7 +1,7 @@
 ﻿using HarmonyLib;
 using ExileController = CNNGMDOPELD;
 using GameDataPlayerInfo = EGLJNOMOGNP.DCJMABDDJCF;
-using GameOptionsData = KMOGFLPJLLK;
+using PlayerControl = FFGALNAPKCD;
 
 namespace MayorMod
 {
@@ -10,7 +10,7 @@ namespace MayorMod
 	{
 		public static void Postfix([HarmonyArgument(0)] GameDataPlayerInfo exiled, ExileController __instance)
 		{
-			if (exiled.JKOMCOJCAID == PlayerControlPatch.Mayor.PlayerId && !(__instance.EOFFAJKKDMI.Substring(__instance.EOFFAJKKDMI.LastIndexOf(".")-11) == "was ejected."))
+			if (exiled.JKOMCOJCAID == PlayerControlPatch.Mayor.PlayerId && PlayerControl.GameOptions.HGOMOAAPHNJ)
             {
 				__instance.EOFFAJKKDMI = exiled.EIGEKHDAKOH + " was The Mayor.";
 			}

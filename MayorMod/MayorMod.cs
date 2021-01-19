@@ -4,7 +4,7 @@ using HarmonyLib;
 
 namespace MayorMod
 {
-	[BepInPlugin("gg.tomozbot.mayormod", "Mayor Mod", "1.0.0")]
+	[BepInPlugin("gg.tomozbot.mayormod", "Mayor Mod", "1.0.1")]
 	public class MayorMod : BasePlugin
 	{
 		public override void Load()
